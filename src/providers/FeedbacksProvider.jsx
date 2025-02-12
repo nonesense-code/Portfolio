@@ -1,153 +1,168 @@
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useData} from "/src/providers/DataProvider.jsx"
-import {useUtils} from "/src/helpers/utils.js"
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useData } from "/src/providers/DataProvider.jsx";
+import { useUtils } from "/src/helpers/utils.js";
 
-const FeedbacksContext = createContext(null)
-export const useFeedbacks = () => useContext(FeedbacksContext)
+const FeedbacksContext = createContext(null);
+export const useFeedbacks = () => useContext(FeedbacksContext);
 
-export const FeedbacksProvider = ({children}) => {
-    const utils = useUtils()
-    const {getSettings} = useData()
-    const settings = getSettings()
+export const FeedbacksProvider = ({ children }) => {
+  const utils = useUtils();
+  const { getSettings } = useData();
+  const settings = getSettings();
 
-    const [spinnerActivities, setSpinnerActivities] = useState([])
-    const [animatedCursorEnabled, setAnimatedCursorEnabled] = useState(true)
-    const [animatedCursorActive, setAnimatedCursorActive] = useState(true)
+  const [spinnerActivities, setSpinnerActivities] = useState([]);
+  const [animatedCursorEnabled, setAnimatedCursorEnabled] = useState(true);
+  const [animatedCursorActive, setAnimatedCursorActive] = useState(true);
 
-    const [displayingNotification, setDisplayingNotification] = useState(null)
-    const [displayingYoutubeVideo, setDisplayingYoutubeVideo] = useState(null)
-    const [displayingGallery, setDisplayingGallery] = useState(null)
-    const [pendingConfirmation, setPendingConfirmation] = useState(null)
+  const [displayingNotification, setDisplayingNotification] = useState(null);
+  const [displayingYoutubeVideo, setDisplayingYoutubeVideo] = useState(null);
+  const [displayingGallery, setDisplayingGallery] = useState(null);
+  const [pendingConfirmation, setPendingConfirmation] = useState(null);
 
-    useEffect(() => {
-        setAnimatedCursorEnabled(!utils.isTouchDevice() && settings["animatedCursorEnabled"])
-    }, [])
+  useEffect(() => {
+    setAnimatedCursorEnabled(
+      !utils.isTouchDevice() && settings["animatedCursorEnabled"]
+    );
+  }, []);
 
-    // SPINNER...
-    const showActivitySpinner = (activityId, message) => {
-        if(spinnerActivities.find(activity => activity.id === activityId))
-            return
+  // SPINNER...
+  const showActivitySpinner = (activityId, message) => {
+    if (spinnerActivities.find((activity) => activity.id === activityId))
+      return;
 
-        const data = { id: activityId, message: message }
-        setSpinnerActivities(prevActivities => [...prevActivities, data])
-    }
+    const data = { id: activityId, message: message };
+    setSpinnerActivities((prevActivities) => [...prevActivities, data]);
+  };
 
-    const isShowingSpinner = () => {
-        return spinnerActivities.length
-    }
+  const isShowingSpinner = () => {
+    return spinnerActivities.length;
+  };
 
-    const listSpinnerActivities = () => {
-        return spinnerActivities
-    }
+  const listSpinnerActivities = () => {
+    return spinnerActivities;
+  };
 
-    const hideActivitySpinner = (activityId) => {
-        setSpinnerActivities(prevActivities =>
-            prevActivities.filter(activity => activity.id !== activityId)
-        )
-    }
+  const hideActivitySpinner = (activityId) => {
+    setSpinnerActivities((prevActivities) =>
+      prevActivities.filter((activity) => activity.id !== activityId)
+    );
+  };
 
-    // ANIMATED CURSOR...
-    const isAnimatedCursorEnabled = () => {
-        return animatedCursorEnabled
-    }
+  // ANIMATED CURSOR...
+  const isAnimatedCursorEnabled = () => {
+    return animatedCursorEnabled;
+  };
 
-    const isAnimatedCursorActive = () => {
-        return animatedCursorActive
-    }
+  const isAnimatedCursorActive = () => {
+    return animatedCursorActive;
+  };
 
-    const toggleAnimatedCursorActive = () => {
-        setAnimatedCursorActive(!animatedCursorActive)
-    }
+  const toggleAnimatedCursorActive = () => {
+    setAnimatedCursorActive(!animatedCursorActive);
+  };
 
-    // NOTIFICATIONS...
-    const displayNotification = (type, title, message) => {
-        setDisplayingNotification({
-            type: type,
-            title: title,
-            message: message
-        })
-    }
+  // NOTIFICATIONS...
+  const displayNotification = (type, title, message) => {
+    setDisplayingNotification({
+      type: type,
+      title: title,
+      message: message,
+    });
+  };
 
-    const killNotification = () => {
-        setDisplayingNotification(null)
-    }
+  const killNotification = () => {
+    setDisplayingNotification(null);
+  };
 
-    // YOUTUBE VIDEOS...
-    const displayYoutubeVideo = (url, title, description) => {
-        setDisplayingYoutubeVideo({
-            url: url,
-            title: title,
-            description: description
-        })
-    }
+  // YOUTUBE VIDEOS...
+  const displayYoutubeVideo = (url, title, description) => {
+    setDisplayingYoutubeVideo({
+      url: url,
+      title: title,
+      description: description,
+    });
+  };
 
-    const hideYoutubeVideo = () => {
-        setDisplayingYoutubeVideo(null)
-    }
+  const hideYoutubeVideo = () => {
+    setDisplayingYoutubeVideo(null);
+  };
 
-    const showConfirmationDialog = (title, message, cancelButtonLabel, confirmButtonLabel, onConfirm) => {
-        setPendingConfirmation({
-            title: title,
-            message: message,
-            cancelButtonLabel: cancelButtonLabel,
-            confirmButtonLabel: confirmButtonLabel,
-            onConfirm: onConfirm
-        })
-    }
+  const showConfirmationDialog = (
+    title,
+    message,
+    cancelButtonLabel,
+    confirmButtonLabel,
+    onConfirm
+  ) => {
+    setPendingConfirmation({
+      title: title,
+      message: message,
+      cancelButtonLabel: cancelButtonLabel,
+      confirmButtonLabel: confirmButtonLabel,
+      onConfirm: onConfirm,
+    });
+  };
 
-    const hideConfirmationDialog = () => {
-        setPendingConfirmation(null)
-    }
+  const hideConfirmationDialog = () => {
+    setPendingConfirmation(null);
+  };
 
-    // GALLERY...
-    const displayGallery = (screenshots, aspectRatio, title, description) => {
-        setDisplayingGallery({
-            screenshots: screenshots,
-            aspectRatio: aspectRatio,
-            title: title,
-            description: description
-        })
-    }
+  // GALLERY...
+  const displayGallery = (screenshots, aspectRatio, title, description) => {
+    setDisplayingGallery({
+      screenshots: screenshots,
+      aspectRatio: aspectRatio,
+      title: title,
+      description: description,
+    });
+  };
 
-    const hideGallery = () => {
-        setDisplayingGallery(null)
-    }
+  const hideGallery = () => {
+    setDisplayingGallery(null);
+  };
 
-    // OTHER METHODS...
-    const isModalOpen = () => {
-        return isShowingSpinner() || displayingYoutubeVideo || displayingGallery || pendingConfirmation
-    }
-
+  // OTHER METHODS...
+  const isModalOpen = () => {
     return (
-        <FeedbacksContext.Provider value={{
-            isShowingSpinner,
-            listSpinnerActivities,
-            showActivitySpinner,
-            hideActivitySpinner,
+      isShowingSpinner() ||
+      displayingYoutubeVideo ||
+      displayingGallery ||
+      pendingConfirmation
+    );
+  };
 
-            isAnimatedCursorEnabled,
-            isAnimatedCursorActive,
-            toggleAnimatedCursorActive,
+  return (
+    <FeedbacksContext.Provider
+      value={{
+        isShowingSpinner,
+        listSpinnerActivities,
+        showActivitySpinner,
+        hideActivitySpinner,
 
-            displayingNotification,
-            displayNotification,
-            killNotification,
+        isAnimatedCursorEnabled,
+        isAnimatedCursorActive,
+        toggleAnimatedCursorActive,
 
-            displayingYoutubeVideo,
-            displayYoutubeVideo,
-            hideYoutubeVideo,
+        displayingNotification,
+        displayNotification,
+        killNotification,
 
-            displayingGallery,
-            displayGallery,
-            hideGallery,
+        displayingYoutubeVideo,
+        displayYoutubeVideo,
+        hideYoutubeVideo,
 
-            pendingConfirmation,
-            showConfirmationDialog,
-            hideConfirmationDialog,
+        displayingGallery,
+        displayGallery,
+        hideGallery,
 
-            isModalOpen
-        }}>
-            {children}
-        </FeedbacksContext.Provider>
-    )
-}
+        pendingConfirmation,
+        showConfirmationDialog,
+        hideConfirmationDialog,
+
+        isModalOpen,
+      }}
+    >
+      {children}
+    </FeedbacksContext.Provider>
+  );
+};
