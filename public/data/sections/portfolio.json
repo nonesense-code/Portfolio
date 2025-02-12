@@ -14,15 +14,6 @@
             "locales": {},
             "categories": [
                 {
-                    "id": "apps",
-                    "locales": {
-                        "en": {
-                            "singular": "App",
-                            "plural": "Apps"
-                        }
-                    }
-                },
-                {
                     "id": "websites",
                     "locales": {
                         "en": {

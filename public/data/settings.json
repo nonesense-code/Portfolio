@@ -23,7 +23,6 @@
     "status": {
         "visible": true,
         "available": true,
-
         "locales": {
             "en": {"message": "Available for freelance!"}
         }
