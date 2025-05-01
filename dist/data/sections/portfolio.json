@@ -14,29 +14,11 @@
             "locales": {},
             "categories": [
                 {
-                    "id": "apps",
-                    "locales": {
-                        "en": {
-                            "singular": "App",
-                            "plural": "Apps"
-                        }
-                    }
-                },
-                {
                     "id": "websites",
                     "locales": {
                         "en": {
                             "singular": "Website",
                             "plural": "Web"
-                        }
-                    }
-                },
-                {
-                    "id": "utilities",
-                    "locales": {
-                        "en": {
-                            "singular": "Utility",
-                            "plural": "Utilities"
                         }
                     }
                 }
@@ -100,8 +82,7 @@
                 {
                     "categoryId": "websites",
                     "icon": {
-                        "img": "images/pictures/prime-wellbeing-logo",
-                        "fa": "",
+                        "img": "images/pictures/prime-wellbeing.png",
                         "faColors": {
                             "bg": null,
                             "fill": null
@@ -116,7 +97,7 @@
                     "locales": {
                         "en": {
                             "title": "Prime Wellbeing",
-                            "text": "A product bill making site where bills are saved as the image at its finalizing stage. It also features the selection of products and their quantity smoothly with a perfect CRUD operation.",
+                            "text": "A product bill making site where bills are saved as the image at its finalizing stage. It also features the selection of products and their quantity smoothly with highly optimized CRUD operations.",
                             "tags": [
                                 "React",
                                 "Bill"
@@ -125,10 +106,9 @@
                     }
                 },
                 {
-                    "categoryId": "utilities",
+                    "categoryId": "websites",
                     "icon": {
-                        "img": "images/pictures/project-logo-3.png",
-                        "fa": "",
+                        "img": "images/pictures/techr-logo.png",
                         "faColors": {
                             "bg": null,
                             "fill": null
@@ -136,59 +116,18 @@
                     },
                     "links": [
                         {
-                            "faIcon": "fa-brands fa-github",
-                            "href": "https://github.com"
-                        },
-                        {
-                            "faIcon": "fa-brands fa-npm",
-                            "href": "https://npm.com"
+                            "faIcon": "fa-solid fa-link",
+                            "href": "https://tech-r.vercel.app/"
                         }
                     ],
-                    "media": {
-                        "youtubeVideo": "https://www.youtube.com/watch?v=32XsfeIX_rM",
-                        "screenshots": {
-                            "aspectRatio": null,
-                            "images": []
-                        }
-                    },
                     "locales": {
                         "en": {
-                            "title": "BrainPulse",
-                            "text": "A <b>RESTful API</b> backend built with <b>Node.js</b>, designed for high-performance data processing and real-time event handling.",
+                            "title": "TechR",
+                            "text": "A website build especially focusing on the Backend. The site is very basics from the front but its very easy to add the new products and perform CRUD operation from its server.",
                             "tags": [
-                                "API",
-                                "REST",
-                                "Backend"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "categoryId": "utilities",
-                    "icon": {
-                        "img": "images/pictures/project-logo-4.png",
-                        "fa": "",
-                        "faColors": {
-                            "bg": null,
-                            "fill": null
-                        }
-                    },
-                    "links": [],
-                    "media": {
-                        "youtubeVideo": "https://www.youtube.com/watch?v=bf3Lz33nHy0",
-                        "screenshots": {
-                            "aspectRatio": null,
-                            "images": []
-                        }
-                    },
-                    "locales": {
-                        "en": {
-                            "title": "Soccer Analytics",
-                            "text": "An AI-powered sports analytics platform built with <b>Python</b> and <b>TensorFlow</b>, offering detailed soccer <b>predictions</b> and team management tools.",
-                            "tags": [
-                                "AI",
-                                "Prediction",
-                                "Soccer"
+                                "React",
+                                "Node",
+                                "API"
                             ]
                         }
                     }
