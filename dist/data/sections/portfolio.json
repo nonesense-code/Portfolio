@@ -100,7 +100,8 @@
                 {
                     "categoryId": "websites",
                     "icon": {
-                        "fa": "fa-brands fa-react",
+                        "img": "images/pictures/prime-wellbeing-logo",
+                        "fa": "",
                         "faColors": {
                             "bg": null,
                             "fill": null
@@ -109,13 +110,13 @@
                     "links": [
                         {
                             "faIcon": "fa-solid fa-link",
-                            "href": "https://zoewellness.vercel.app/"
+                            "href": "https://prime-1-c6lr.onrender.com"
                         }
                     ],
                     "locales": {
                         "en": {
-                            "title": "Zoewellness",
-                            "text": "A product bill making site where bills are saved as the image at its finalizing stage. It also features the selection of products and their quantity smoothly.",
+                            "title": "Prime Wellbeing",
+                            "text": "A product bill making site where bills are saved as the image at its finalizing stage. It also features the selection of products and their quantity smoothly with a perfect CRUD operation.",
                             "tags": [
                                 "React",
                                 "Bill"
