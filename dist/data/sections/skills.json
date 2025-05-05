@@ -155,14 +155,13 @@
                 },
                 {
                     "icon": {
-                        "img": null,
-                        "fa": "fa-brands fa-tailwindcss",
+                        "img": "images/pictures/tailwind-icon.png",
                         "faColors": {
                             "bg": "#4FC08D",
                             "fill": "#111"
                         }
                     },
-                    "value": 40,
+                    "value": 75,
                     "dates": {
                         "start": "08/30/2023"
                     },
@@ -175,8 +174,7 @@
                 },
                 {
                     "icon": {
-                        "img": null,
-                        "fa": "fa-brands fa-gsap",
+                        "img": "images/pictures/framermotion-icon.png",
                         "faColors": {
                             "bg": "#7952B3",
                             "fill": "#EEE"
