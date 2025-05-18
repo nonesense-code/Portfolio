@@ -1,4 +1,15 @@
 /** Customizing Bootstrap/Swiper components... **/
+
+#profile-image {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+
 button {
     &:focus {
         box-shadow: none!important;
