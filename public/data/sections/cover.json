@@ -146,7 +146,8 @@
                     "icon": {
                         "img": "images/pictures/kml.jpg",
                         "fa": "fa-solid fa-user",
-                        "faColors": null
+                        "faColors": null,
+                        "id": "profile-image"
                     },
                     "locales": {
                         "en": {

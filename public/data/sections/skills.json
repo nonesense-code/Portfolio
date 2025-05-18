@@ -82,7 +82,7 @@
                             "fill": "#EEE"
                         }
                     },
-                    "value": 100,
+                    "value": 90,
                     "dates": {
                         "start": "2021"
                     },
@@ -102,7 +102,7 @@
                             "fill": "#EEE"
                         }
                     },
-                    "value": 65,
+                    "value": 80,
                     "dates": {
                         "start": "2022"
                     },
@@ -122,13 +122,33 @@
                             "fill": "#111"
                         }
                     },
-                    "value": 70,
+                    "value": 80,
                     "dates": {
-                        "start": "2022"
+                        "start": "2023"
                     },
                     "locales": {
                         "en": {
                             "title": "JavaScript ES6+",
+                            "info": null
+                        }
+                    }
+                },
+                {
+                    "icon": {
+                        "img": null,
+                        "fa": "fa-brands fa-wordpress",
+                        "faColors": {
+                            "bg": "#ffffff",
+                            "fill": "#21759B"
+                        }
+                    },
+                    "value": 70,
+                    "dates": {
+                        "start": "2024"
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "WordPress",
                             "info": null
                         }
                     }
@@ -142,9 +162,9 @@
                             "fill": "#111"
                         }
                     },
-                    "value": 70,
+                    "value": 65,
                     "dates": {
-                        "start": "2023"
+                        "start": "2024"
                     },
                     "locales": {
                         "en": {
@@ -161,7 +181,7 @@
                             "fill": "#111"
                         }
                     },
-                    "value": 75,
+                    "value": 70,
                     "dates": {
                         "start": "08/30/2023"
                     },
@@ -182,11 +202,11 @@
                     },
                     "value": 40,
                     "dates": {
-                        "start": "2022"
+                        "start": "2024"
                     },
                     "locales": {
                         "en": {
-                            "title": "Others",
+                            "title": "Framer-Motion, GSAP & Others",
                             "info": null
                         }
                     }
@@ -212,9 +232,9 @@
                             "fill": "#EEE"
                         }
                     },
-                    "value": 60,
+                    "value": 65,
                     "dates": {
-                        "start": "2023"
+                        "start": "2024"
                     },
                     "locales": {
                         "en": {
@@ -252,9 +272,9 @@
                             "fill": "#EEE"
                         }
                     },
-                    "value": 20,
+                    "value": 50,
                     "dates": {
-                        "start": "2023"
+                        "start": "2024"
                     },
                     "locales": {
                         "en": {
