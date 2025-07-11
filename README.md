@@ -19,7 +19,7 @@ A sleek, futuristic portfolio template for developers – built with **React** a
 
 ## 🔗 [Live Preview](https://ryanbalieiro.github.io/react-portfolio-template/)
 
-Check out the deployed version [here on GitHub Pages](https://ryanbalieiro.github.io/react-portfolio-template/)
+Check out the deployed version [here on GitHub Pages](https://kaushalkadariya.com.np)
 
 ---
 
