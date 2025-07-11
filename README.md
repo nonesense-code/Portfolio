@@ -17,7 +17,7 @@ A sleek, futuristic portfolio template for developers – built with **React** a
 
 ---
 
-## 🔗 [Live Preview](https://ryanbalieiro.github.io/react-portfolio-template/)
+## 🔗 [Live Preview](https://kaushalkadariya.com.np)
 
 Check out the deployed version [here on GitHub Pages](https://kaushalkadariya.com.np)
 
@@ -42,7 +42,7 @@ Mobile view groups sections into tabs with a bottom navigation for optimal exper
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/kaushalkadariya/react-portfolio-template.git
-cd react-portfolio-template
+
+git clone https://github.com/nonesense-code/portfolio.git
 npm install
-npm run dev
+npm start
